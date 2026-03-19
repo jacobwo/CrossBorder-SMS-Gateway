@@ -81,6 +81,26 @@ This system relies on iMessage. Please be vigilant about the identity of message
     Keep the China Mainland device permanently connected to a charger  
     確保中國大陸設備長期連接電源
 
+* **Voice Call Handling (Voicemail) / 語音通話處理（語音信箱）**  
+Because iMessage only forwards SMS, use Conditional Call Forwarding to handle incoming calls.  
+因为 iMessage 僅能轉發短訊，建議設置有條件呼叫轉移以處理來電。
+  * **China Mobile / 中國移動:**
+    * Action: Dial \*\*61\*12599\*11\*8\# (8s delay, range 5-30s); 3 RMB/mo or 30 RMB/year.  
+      操作與資費： 撥打 \*\*61\*12599\*11\*8\#（設置響鈴 8 秒轉移，範圍 5-30 秒）；資費約 3 元/月或 30 元/年（需另行開通）。
+    * Access: Listen to voice notes via the "He Liu Yan" (Voicemail) WeChat Mini-program.  
+      收聽方式： 可透過「和留言」(Voicemail) 微信小程序收聽語音留言。
+  * **Other Carriers / 其他運營商:**  
+    Similar voicemail services are available for China Unicom and China Telecom.  
+    中國聯通與中國電信亦有提供類似的語音信箱服務。
+* **Anti-Deactivation (Active Usage) / 模擬人工操作（防停機）**  
+  Because carriers may flag a SIM as "dormant" if unused, perform an active operation every 30 days.  
+  因為運營商可能將長期未使用的 SIM 卡判定為「休眠」，建議每 30 天內進行一次主動操作。
+
+  * Action & Timing: Send CXYE (Balance) or CXLL (Data) to 10086 (or 10010/10001) during China business hours (9 AM - 10 PM).  
+    操作與時機： 在中國大陸白天時間 (9 AM - 10 PM) 發送 CXYE 或 CXLL 至 10086（或 10010/10001）。
+  * Future Update: A Shortcuts + Python script with random delays will be provided to automate this.  
+    未來更新： 將提供基於捷徑 + 隨機 Python 延遲的自動化腳本，以實現自動發送。
+
 ---
 
 ## 6. User Case / 實際使用案例
@@ -90,13 +110,14 @@ This system relies on iMessage. Please be vigilant about the identity of message
 * **Syncing Pair:** Two **iPhone SE2** units sharing a single **China Mainland Apple ID** (operated by iCloud China).
     * **Device A:** Stays in China Mainland with the SIM card permanently installed   
     * **Device B:** Carried overseas. Most App location services and **Background App Refresh (background operation)** are disabled, except for essential system location services  
+* **Maintenance:** Device B sends a balance check SMS once a month to keep the line active.
 
 **設備配置參考：**
 * **主力手機：** 海外日常使用（非中國大陸 Apple ID）
 * **同步組合：** 兩部 **iPhone SE2**，共享同一個**中國大陸 Apple ID**（由雲上貴州營運）
     * **設備 A：** 帶有 SIM 卡，永遠放置於中國大陸境內
     * **設備 B：** 隨身攜帶。除了系統必須的定位外，關閉了大多數 App 的定位權限及**背景 App（後台運行）**
-
+* **日常維護：** 設備 B 每月定期發送查詢短訊，模擬人工主動使用。
 ---
 
 ## Author / 作者 : **Jacob Wong**
